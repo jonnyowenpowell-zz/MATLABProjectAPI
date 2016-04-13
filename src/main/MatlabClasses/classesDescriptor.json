@@ -1,0 +1,13 @@
+[
+  {
+    "resourcelocation": "matlab",
+    "jar": "plotFactors",
+    "inputs": [{
+      "type": "integer",
+      "order": 1,
+      "minimum": 2,
+      "maximum": 30
+    }],
+    "output": "png"
+  }
+]

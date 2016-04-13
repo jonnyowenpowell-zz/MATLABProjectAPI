@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "MATLAB Classes",
+  "description": "Specification of MATLAB Java classes to make accessible by rest api.",
+  "type": "array",
+  "items": {
+    "title": "MATLAB Class",
+    "type": "object",
+    "properties": {
+      "resourcelocation": {
+        "description": "The location of the MATLAB Class to use in the URI.",
+        "type": "string"
+      },
+      "jar": {
+        "description": "The name of the corresponding MATLAB Java class jar.",
+        "type": "string"
+      },
+      "inputs": {
+        "type": "array",
+        "description": "Set of inputs the MATLAB class takes, as objects containing name and type information.",
+        "items": {
+          "type": "object",
+          "oneOf": [
+            { "$ref": "#/definitions/matlabinteger" },
+            { "$ref": "#/definitions/matlabfloat" },
+            { "$ref": "#/definitions/matlabstring" }
+          ]
+        }
+      },
+      "output": {
+        "description": "Resource type string describing the output",
+        "enum": ["string", "png"]
+      }
+    },
+    "required":  ["resourcelocation", "jar", "inputs", "output"],
+    "additionalProperties": false
+  },
+  "definitions": {
+    "matlabinteger": {
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^integer$"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "minimum": {
+          "type": "integer"
+        },
+        "maximum": {
+          "type": "integer"
+        }
+      },
+      "required":  ["type", "order"],
+      "additionalProperties": false
+    },
+    "matlabfloat": {
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^float$"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "minimum": {
+          "type": "number"
+        },
+        "maximum": {
+          "type": "number"
+        }
+      },
+      "required":  ["type", "order"],
+      "additionalProperties": false
+    },
+    "matlabstring": {
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^string$"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "regex": {
+          "type": "string"
+        }
+      },
+      "required":  ["type", "order"],
+      "additionalProperties": false
+    }
+  }
+}
