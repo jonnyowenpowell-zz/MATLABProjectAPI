@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : MATLABProjectAPI.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/MATLABProjectAPI/exploded/MATLABProjectAPI.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="MATLABProjectAPI_main/web/Web Gradle : MATLABProjectAPI.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MATLABProjectAPI_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/javabuilder.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/MatlabClasses/BeautifulPlot.jar" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: javax.ws.rs:jsr311-api:1.1.1" />
+          <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-core:1.19.1" />
+          <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-server:1.19.1" />
+          <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-servlet:1.19.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/classes/artifacts/MATLABProjectAPI/exploded/MATLABProjectAPI.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
