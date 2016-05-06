@@ -20,10 +20,10 @@ import BeautifulPlot.Plot;
 @Path("matlab")
 public class MatlabResource {
 
-    @POST
+    @GET
     @Produces("text/plain")
     @Consumes(MediaType.APPLICATION_JSON)
-    public String customGraphResponse(String jsonData) {
+    public String graphResponse(String jsonData) {
         StringReader stringReader = new StringReader(jsonData);
         JsonReader jsonReader = Json.createReader(stringReader);
         jsonReader.close();
@@ -42,12 +42,6 @@ public class MatlabResource {
         } catch (JsonParsingException ex) {
             return getGraph(1, 50);
         }
-    }
-
-    @GET
-    @Produces("text/plain")
-    public String defaultGraphResponse() {
-        return getGraph(1,50);
     }
 
     private String getGraph(Integer n, Integer m) {
