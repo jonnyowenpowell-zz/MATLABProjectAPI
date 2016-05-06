@@ -18,7 +18,8 @@
           <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-core:1.19.1" />
           <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-server:1.19.1" />
           <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-servlet:1.19.1" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish/javax.json/1.0.4/3178f73569fd7a1e5ffc464e680f7a8cc784b85a/javax.json-1.0.4.jar" />
+          <element id="library" level="project" name="Gradle: javax.json:javax.json-api:1.0" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish/javax.json/1.0/af5da48125e7fddc7ecd47e300101e599175d47d/javax.json-1.0.jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">

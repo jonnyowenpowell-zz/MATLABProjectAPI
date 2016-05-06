@@ -26,10 +26,10 @@ public class MatlabResource {
     public String customGraphResponse(String jsonData) {
         StringReader stringReader = new StringReader(jsonData);
         JsonReader jsonReader = Json.createReader(stringReader);
-        jsonReader.close();
-        stringReader.close();
         try {
             JsonObject jsonObject = jsonReader.readObject();
+            jsonReader.close();
+            stringReader.close();
             Integer lowerLimit = 1;
             Integer upperLimit = 50;
             try {
@@ -40,6 +40,8 @@ public class MatlabResource {
             }
             return getGraph(lowerLimit, upperLimit);
         } catch (JsonParsingException ex) {
+            jsonReader.close();
+            stringReader.close();
             return getGraph(1, 50);
         }
     }
@@ -47,6 +49,10 @@ public class MatlabResource {
     @GET
     @Produces("text/plain")
     public String defaultGraphResponse() {
+        StringReader stringReader = new StringReader("dilly");
+        JsonReader jsonReader = Json.createReader(stringReader);
+        jsonReader.close();
+        stringReader.close();
         return getGraph(1,50);
     }
 
