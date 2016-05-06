@@ -12,7 +12,7 @@ public class HelloWorldResource {
 
     @POST
     @Produces(MediaType.TEXT_PLAIN)
-    @Consumes("text/plain")
+    @Consumes(MediaType.TEXT_PLAIN)
     public String sayHello(String name) {
         return "Hello " + name;
     }
