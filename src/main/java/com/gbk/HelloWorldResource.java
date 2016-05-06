@@ -1,5 +1,6 @@
 package com.gbk;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -14,8 +15,9 @@ public class HelloWorldResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String sayHello() {
-        return "Hello buddy, LD_LIBRARY_PATH is " + System.getenv("LD_LIBRARY_PATH");
+    @Consumes("text/plain")
+    public String sayHello(String name) {
+        return "Hello " + name;
     }
 
 }
