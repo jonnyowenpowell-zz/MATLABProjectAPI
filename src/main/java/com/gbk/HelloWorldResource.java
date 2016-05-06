@@ -10,15 +10,17 @@ import javax.ws.rs.core.MediaType;
 @Path("hello")
 public class HelloWorldResource {
 
-    @GET
+    @POST
     @Produces(MediaType.TEXT_PLAIN)
     @Consumes(MediaType.TEXT_PLAIN)
     public String sayHello(String name) {
-        if (name != null) {
-            return "Hello " + name;
-        } else {
-            return "Hello buddy";
-        }
+        return "Hello " + name;
+    }
+
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String sayHelloWorld() {
+        return "Hello buddy!";
     }
 
 }
