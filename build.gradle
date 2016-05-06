@@ -15,7 +15,7 @@ dependencies {
 		[group: 'com.sun.jersey', name: 'jersey-core', version: '1.19.1'],
     	[group: 'com.sun.jersey', name: 'jersey-server', version: '1.19.1'],
     	[group: 'com.sun.jersey', name: 'jersey-servlet', version: '1.19.1'],
-        [group: 'javax.json', name: 'javax.json-api', version: '1.0']
+        [group: 'org.glassfish', name: 'javax.json', version: '1.0.4']
     )
     compile fileTree(dir: "$rootProject.projectDir/src/main/webapp/WEB-INF/lib", include: '*.jar')
     compile fileTree(dir: "$rootProject.projectDir/src/main/MatlabClasses", include: '*.jar')

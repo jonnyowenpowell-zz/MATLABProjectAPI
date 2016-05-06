@@ -54,6 +54,6 @@
     <orderEntry type="library" name="Gradle: com.sun.jersey:jersey-core:1.19.1" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.jersey:jersey-server:1.19.1" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.jersey:jersey-servlet:1.19.1" level="project" />
-    <orderEntry type="library" name="Gradle: javax.json:javax.json-api:1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.glassfish:javax.json:1.0.4" level="project" />
   </component>
 </module>
