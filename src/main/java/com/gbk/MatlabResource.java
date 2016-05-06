@@ -21,7 +21,7 @@ import BeautifulPlot.Plot;
 public class MatlabResource {
 
     @POST
-    @Produces("image/png")
+    @Produces("text/plain")
     @Consumes(MediaType.APPLICATION_JSON)
     public String customGraphResponse(String jsonData) {
         StringReader stringReader = new StringReader(jsonData);
@@ -45,7 +45,7 @@ public class MatlabResource {
     }
 
     @GET
-    @Produces("image/png")
+    @Produces("text/plain")
     public String defaultGraphResponse() {
         return getGraph(1,50);
     }
