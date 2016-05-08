@@ -1,13 +1,7 @@
 package com.gbk;
 
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import javax.json.stream.JsonParsingException;
 import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
 import javax.xml.bind.DatatypeConverter;
-import java.io.StringReader;
 
 import com.mathworks.toolbox.javabuilder.*;
 import BeautifulPlot.Plot;
@@ -20,40 +14,27 @@ import BeautifulPlot.Plot;
 @Path("matlab")
 public class MatlabResource {
 
-    @POST
+    @Path("{n: [0-9]*}_{m: [0-9]*}")
+    @GET
     @Produces("text/plain")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public String customGraphResponse(String jsonData) {
-        StringReader stringReader = new StringReader(jsonData);
-        JsonReader jsonReader = Json.createReader(stringReader);
-        try {
-            JsonObject jsonObject = jsonReader.readObject();
-            jsonReader.close();
-            stringReader.close();
-            Integer lowerLimit = 1;
-            Integer upperLimit = 50;
-            try {
-                lowerLimit = jsonObject.getInt("lowerLimit");
-                upperLimit = jsonObject.getInt("upperLimit");
-            } catch(NullPointerException|ClassCastException ex) {
-                // Who cares
-            }
-            return getGraph(lowerLimit, upperLimit);
-        } catch (JsonParsingException ex) {
-            jsonReader.close();
-            stringReader.close();
-            return getGraph(1, 50);
-        }
+    public String customGraphResponse(@PathParam("n") String fromInteger, @PathParam("m") String toInteger) {
+        Integer n = Integer.parseInt(fromInteger);
+        Integer m = Integer.parseInt(toInteger);
+        return getGraph(n, m);
+    }
+
+    @Path("{n: [0-9]*}")
+    @GET
+    @Produces("text/plain")
+    public String partialCustomGraphResponse(@PathParam("n") String toInteger) {
+        Integer n = Integer.parseInt(toInteger);
+        return getGraph(1, n);
     }
 
     @GET
     @Produces("text/plain")
-    public String defaultGraphResponse() {
-        StringReader stringReader = new StringReader("dilly");
-        JsonReader jsonReader = Json.createReader(stringReader);
-        jsonReader.close();
-        stringReader.close();
-        return getGraph(1,50);
+    public String getGraph() {
+        return getGraph(1, 50);
     }
 
     private String getGraph(Integer n, Integer m) {
