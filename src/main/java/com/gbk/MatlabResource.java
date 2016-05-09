@@ -16,7 +16,7 @@ public class MatlabResource {
 
     @GET
     @Produces("text/plain")
-    public String respond(@DefaultValue("1") @QueryParam("from") int from, @DefaultValue("50") @QueryParam("from") int to) {
+    public String respond(@DefaultValue("1") @QueryParam("from") int from, @DefaultValue("50") @QueryParam("to") int to) {
         return getGraph(from, to);
     }
 
