@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fc29853-79b2-4a59-8d01-729284364f1c" name="Default" comment="Updated Matlab to adhere to Restful API principles.">
+    <list default="true" id="4fc29853-79b2-4a59-8d01-729284364f1c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gbk/HelloWorldResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/gbk/HelloWorldResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gbk/MatlabResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/gbk/MatlabResource.java" />
@@ -56,12 +56,10 @@
       <file leaf-file-name="MatlabResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gbk/MatlabResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="138">
+              <caret line="18" column="73" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#847#848#0" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,8 +68,8 @@
       <file leaf-file-name="HelloWorldResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gbk/HelloWorldResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="255">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -417,8 +415,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="214" />
-    <option name="y" value="105" />
+    <option name="x" value="336" />
+    <option name="y" value="113" />
     <option name="width" value="1484" />
     <option name="height" value="775" />
   </component>
@@ -447,6 +445,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -586,7 +585,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1080,7 +1078,8 @@
       <workItem from="1462481622177" duration="911000" />
       <workItem from="1462482980042" duration="10000" />
       <workItem from="1462523451107" duration="8827000" />
-      <workItem from="1462732478068" duration="427000" />
+      <workItem from="1462732478068" duration="450000" />
+      <workItem from="1462805884003" duration="121000" />
     </task>
     <task id="LOCAL-00001" summary="Updated HelloWorldResource to include LD_LIBRARY_PATH.">
       <created>1460551041686</created>
@@ -1173,14 +1172,21 @@
       <option name="project" value="LOCAL" />
       <updated>1462535938977</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated API to adhere to Restful API principles.">
+      <created>1462732912245</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1462732912245</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39827000" />
+    <option name="totallyTimeSpent" value="39971000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="214" y="105" width="1484" height="775" extended-state="0" />
+    <frame x="336" y="113" width="1484" height="775" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1238,7 +1244,8 @@
     <MESSAGE value="Reintroduced POST methods." />
     <MESSAGE value="Updated Tomcat CORS configuration." />
     <MESSAGE value="Updated JSON parser dependencies." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated JSON parser dependencies." />
+    <MESSAGE value="Updated API to adhere to Restful API principles." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated API to adhere to Restful API principles." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1263,8 +1270,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1290,8 +1295,6 @@
           <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1369,8 +1372,6 @@
           <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1403,8 +1404,6 @@
           <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1585,18 +1584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gbk/MatlabResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1605,10 +1592,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gbk/MatlabResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="18" column="73" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gbk/HelloWorldResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="255">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
           <folding />
         </state>
       </provider>

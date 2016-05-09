@@ -14,27 +14,10 @@ import BeautifulPlot.Plot;
 @Path("matlab")
 public class MatlabResource {
 
-    @Path("{n: [0-9]*}_{m: [0-9]*}")
     @GET
     @Produces("text/plain")
-    public String customGraphResponse(@PathParam("n") String fromInteger, @PathParam("m") String toInteger) {
-        Integer n = Integer.parseInt(fromInteger);
-        Integer m = Integer.parseInt(toInteger);
-        return getGraph(n, m);
-    }
-
-    @Path("{n: [0-9]*}")
-    @GET
-    @Produces("text/plain")
-    public String partialCustomGraphResponse(@PathParam("n") String toInteger) {
-        Integer n = Integer.parseInt(toInteger);
-        return getGraph(1, n);
-    }
-
-    @GET
-    @Produces("text/plain")
-    public String getGraph() {
-        return getGraph(1, 50);
+    public String respond(@DefaultValue("1") @QueryParam("from") int from, @DefaultValue("50") @QueryParam("from") int to) {
+        return getGraph(from, to);
     }
 
     private String getGraph(Integer n, Integer m) {

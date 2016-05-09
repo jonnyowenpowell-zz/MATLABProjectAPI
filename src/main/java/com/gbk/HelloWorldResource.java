@@ -12,7 +12,10 @@ public class HelloWorldResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String sayHelloWorld() {
+    public String sayHelloWorld(@QueryParam("name") String name) {
+        if ( name!=null ) {
+            return "Hello, " +name;
+        }
         return "Hello buddy!";
     }
 
