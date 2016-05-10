@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 public class HelloWorldResource {
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain")
     public String sayHelloWorld(@QueryParam("name") String name) {
         if ( name!=null ) {
             return "Hello, " +name;

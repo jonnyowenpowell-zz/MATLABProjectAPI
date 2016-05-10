@@ -1,6 +1,7 @@
 package com.gbk;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import javax.xml.bind.DatatypeConverter;
 
 import com.mathworks.toolbox.javabuilder.*;
@@ -15,7 +16,7 @@ import BeautifulPlot.Plot;
 public class MatlabResource {
 
     @GET
-    @Produces("text/plain")
+    @Produces("image/png")
     public String respond(@DefaultValue("1") @QueryParam("from") int from, @DefaultValue("50") @QueryParam("to") int to) {
         return getGraph(from, to);
     }
