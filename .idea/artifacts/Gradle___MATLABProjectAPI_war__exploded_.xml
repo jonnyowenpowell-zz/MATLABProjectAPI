@@ -10,16 +10,17 @@
         <element id="directory" name="classes">
           <element id="module-output" name="MATLABProjectAPI_main" />
           <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
-          <element id="file-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/javabuilder.jar" />
-          <element id="file-copy" path="$PROJECT_DIR$/src/main/MatlabClasses/BeautifulPlot.jar" />
         </element>
         <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/javabuilder.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/MatlabClasses/BeautifulPlot.jar" />
           <element id="library" level="project" name="Gradle: javax.ws.rs:jsr311-api:1.1.1" />
           <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-core:1.19.1" />
           <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-server:1.19.1" />
           <element id="library" level="project" name="Gradle: com.sun.jersey:jersey-servlet:1.19.1" />
           <element id="library" level="project" name="Gradle: javax.json:javax.json-api:1.0" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish/javax.json/1.0/af5da48125e7fddc7ecd47e300101e599175d47d/javax.json-1.0.jar" />
+          <element id="library" level="project" name="Gradle: org.glassfish:javax.json:1.0" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/MatlabClasses/Simulations.jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">
